@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString1
+  attack: 1
+  sp_attack: 1
+  defence: 1
+  sp_defence: 1
+  pokedex_id: 1
+
+two:
+  name: MyString2
+  attack: 1
+  sp_attack: 1
+  defence: 1
+  sp_defence: 1
+  pokedex_id: 2
+
+char:
+  name: Charmander
+  attack: 52
+  sp_attack: 60
+  defence: 43
+  sp_defence: 50
+  pokedex_id: 4
+
+update:
+  name: Charmander
+  attack: 100
+  sp_attack: 101
+  defence: 102
+  sp_defence: 103
+  pokedex_id: 104

@@ -1,0 +1,39 @@
+= if :notice.present?
+  %h2= notice
+
+
+%form
+
+  %label
+    Start time: 
+  %input(type='text' placeholder='00' id='startHour' size='2' maxlength='2')
+  \:
+  %input(type='text' placeholder='00' id='StartMinute' size='2' maxlength='2')
+
+  %input(type='radio' name='startType' value='am')
+    AM
+  %input(type='radio' name='startType' value='pm')
+    PM
+  %input(type='radio' name='startType' value='millitary')
+    Millitary
+
+  %br
+
+  %label
+    Stop time: 
+  %input(type='text' placeholder='00' id='endHour' size='2' maxlength='2')
+  \:
+  %input(type='text' placeholder='00' id='endMinute' size='2' maxlength='2')
+  
+  %input(type='radio' name='endType' value='am')
+    AM
+  %input(type='radio' name='endType' value='pm')
+    PM
+  %input(type='radio' name='endType' value='millitary')
+    Millitary
+
+  %br
+
+  %input(type='button' onclick="submit()" value="submit")
+
+  #output(style='width: 100px; height: 110px; background-color: lime')

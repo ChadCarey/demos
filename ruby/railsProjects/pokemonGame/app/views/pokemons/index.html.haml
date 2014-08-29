@@ -1,0 +1,27 @@
+%h1 Listing pokemons
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Attack
+      %th Sp attack
+      %th Defence
+      %th Sp defence
+      %th Pokedex id
+      %th(colspan="3")
+  %tbody
+    = @pokemons.each do |pokemon|
+      %tr
+        %td= pokemon.name
+        %td= pokemon.attack
+        %td= pokemon.sp_attack
+        %td= pokemon.defence
+        %td= pokemon.sp_defence
+        %td= pokemon.pokedex_id
+        %td= link_to 'Show', pokemon
+        %td= link_to 'Edit', edit_pokemon_path(pokemon)
+        %td= link_to 'Destroy', pokemon, method: :delete, data: { confirm: 'Are you sure?' }
+%br
+
+= link_to 'New Pokemon', new_pokemon_path
