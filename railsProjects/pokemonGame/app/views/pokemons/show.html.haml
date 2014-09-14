@@ -1,0 +1,24 @@
+= if notice.present?
+  %p= notice
+
+%p 
+  Name: 
+  = @pokemon.name
+%p 
+  Attack: 
+  = @pokemon.attack
+
+%p 
+  Special attack: 
+  = @pokemon.sp_attack
+
+%p 
+  Defence: 
+  = @pokemon.defence
+
+%p 
+  Special defence: 
+  = @pokemon.sp_defence
+
+= link_to 'Edit', edit_pokemon_path(@pokemon)
+= link_to 'Back', pokemons_path

@@ -1,0 +1,12 @@
+= if notice.present?
+  %h3= notice
+
+= form_tag do(id='signinbox')
+  %h2 Please log in
+  = label_tag :username, 'Username:'
+  = text_field_tag :username, params[:username]
+  %br
+  = label_tag :password, 'Password:'
+  = text_field_tag :password, params[:password]
+  %br
+  = submit_tag 'login'

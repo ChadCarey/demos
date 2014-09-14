@@ -1,0 +1,29 @@
+<h1>Listing punchcards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Timein</th>
+      <th>Timeout</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @punchcards.each do |punchcard| %>
+      <tr>
+        <td><%= punchcard.timein %></td>
+        <td><%= punchcard.timeout %></td>
+        <td><%= punchcard.user_id %></td>
+        <td><%= link_to 'Show', punchcard %></td>
+        <td><%= link_to 'Edit', edit_punchcard_path(punchcard) %></td>
+        <td><%= link_to 'Destroy', punchcard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Punchcard', new_punchcard_path %>

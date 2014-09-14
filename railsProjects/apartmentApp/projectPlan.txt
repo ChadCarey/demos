@@ -1,0 +1,57 @@
+Project Plan, Single housing
+
+	admin page
+
+
+	`amenities
+		/*
+		  
+		*/
+
+	Semester
+		start date
+		stop date
+
+	contract
+		First name
+		Last name
+		email
+		has: user
+		apartment number (should be saved with the contract when created)
+		cost (should be saved with the contract when created)
+		monthly || semester (boolean) (saved when contract is created)
+		has: contractText (when contract texts are changed they are saved if any user has that contract. If a user needs a contract change they must log in and fill out a new contract)
+		??social security??
+		make pdf from html contract
+
+	`apartment
+		bedrooms
+		bathrooms
+		cost
+		monthly || semester (Boolean)
+		has: amenities
+		/* 
+		 Idea: auto generate pay dates and put them in a calendar on user page? 
+		*/
+
+	contract text
+		/*adds changes to the texts over time, the newest edition will be shown in the contract but can't be removed 
+		or modified if there is a user contract that uses it*/
+
+	`user
+		(logs in == sessions)
+		email
+		password
+		contact_id (this allows the user to view their contract or get a new copy)
+		privaleges (default 0 is for tenants, 1 for managers, 2 for admin)
+		/*
+		 provide a view contract page?
+		*/
+
+/**functional descriptions**/
+privaleges 
+	default 0 is for tenants: no special privaleges
+	1 for managers:
+	2 for admin: grant manager || admin priv, 
+
+email pdf versions of the contract

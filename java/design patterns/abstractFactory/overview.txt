@@ -1,0 +1,6 @@
+/**
+* Design: Abstract factory pattern
+* Use: create familyies of related objects without creating a concrete class 
+* when you have many classes that can be added or modified dynamically durring runtime
+* 
+*/

@@ -1,0 +1,31 @@
+= form_for(@pokemon) do |f|
+  = if @pokemon.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@pokemon.errors.count, "error") 
+        prohibited this pokemon from being saved:
+
+      %ul
+        = @pokemon.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :attack
+    = f.number_field :attack
+  .field
+    = f.label :sp_attack
+    = f.number_field :sp_attack
+  .field
+    = f.label :defence
+    = f.number_field :defence
+  .field
+    = f.label :sp_defence
+    = f.number_field :sp_defence
+  .field
+    = f.label :pokedex_id
+    = f.number_field :pokedex_id
+  .actions
+    = f.submit

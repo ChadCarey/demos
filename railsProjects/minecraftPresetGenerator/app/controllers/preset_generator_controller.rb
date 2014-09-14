@@ -1,0 +1,2 @@
+class PresetGeneratorController < ApplicationController
+end
